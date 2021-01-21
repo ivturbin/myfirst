@@ -27,20 +27,17 @@
 + Опасность использования команды force и её альтернатива - [force-with-lease](https://blog.developer.atlassian.com/force-with-lease/), а также [возможные варианты решений](https://medium.com/@vitaliystanyshevskyy/git-push-origin-master-force-eec683936622) **(\*\*\*)**
 + История действий в git - [reflog](https://git-scm.com/docs/git-reflog) **(\*\*\*)**
 
-**3. Ведение проектов**
-+  [Flow проекта, ведение в Power Steering](https://kb.simbirsoft.com/article/tasktracker/) **(\*\*\*)**
-
-**4. Создание проекта, среда разработки Android Studio**
+**3. Создание проекта, среда разработки Android Studio**
 + [Установка Android Studio](https://developer.android.com/studio) **(\*\*\*\*)**
 + [Создание нового проекта](https://developer.android.com/training/basics/firstapp/index.html) **(\*\*\*\*)**
 + [Основы интерфейса Android Studio](https://developer.android.com/studio/intro/index.html) **(\*\*\*\*)**
 + [Горячие клавиши Android Studio](https://developer.android.com/studio/intro/keyboard-shortcuts) **(\*\*)**
 + [Горячие клавиши Android Studio, повышение производительности](https://habr.com/ru/post/359376/) **(\*\*\*)**
 
-**5. Gradle**
+**4. Gradle**
 + [Gradle](https://developer.android.com/studio/build/index.html) **(\*\*\*)**
 
-**6. Codelabs**
+**5. Codelabs**
 + [Android Studio and Hello World](https://codelabs.developers.google.com/codelabs/android-training-hello-world/index.html?index=..%2F..index#0) **(\*\*)**
 
 
