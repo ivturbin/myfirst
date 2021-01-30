@@ -147,9 +147,9 @@
 ### Базовое задание
 Все задачи должны быть выполнены в указанном репозитории в отдельной ветке, вида training/lastname_firstname_date. После выполнения должен быть создан merge request на ментора.
 
-1. [Работа со списками](http://gitlab.simbirsoft/mobile/javacoreTraining/blob/master/app/src/main/java/com/example/user/javacoretraining/collections/CollectionsBlock.java)
-2. [Работа с классами](http://gitlab.simbirsoft/mobile/javacoreTraining/blob/master/app/src/main/java/com/example/user/javacoretraining/classes/ClassesBlock.java)
-3. [Работа со строками](http://gitlab.simbirsoft/mobile/javacoreTraining/blob/master/app/src/main/java/com/example/user/javacoretraining/training/StringsTraining.java)
+1. [Работа со списками](https://github.com/KatherineStrider/javacoreTraining/blob/master/app/src/main/java/com/example/user/javacoretraining/collections/CollectionsBlock.java)
+2. [Работа с классами](https://github.com/KatherineStrider/javacoreTraining/blob/master/app/src/main/java/com/example/user/javacoretraining/classes/ClassesBlock.java)
+3. [Работа со строками](https://github.com/KatherineStrider/javacoreTraining/blob/master/app/src/main/java/com/example/user/javacoretraining/training/StringsTraining.java)
 
 
 ### Практическое задание
