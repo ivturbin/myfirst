@@ -1,7 +1,6 @@
 package com.example.myapplication
 
 import android.util.Log
-import androidx.annotation.NonNull
 
 /**
  *Необходимо создать интерфейс Publication,
@@ -60,16 +59,15 @@ class Practice {
      * Результаты сравнений вывести в лог.
      * */
 
-
     fun secondTask() {
         val book1 = Book(100, 1200)
         val book2 = Book(150, 8000)
         val magazine = Magazine(20, 400)
         val TAG: String = "PUBLICATION"
 
-        Log.i(TAG, String.format("Тип книги: %-12s, количество слов: %-5d, цена: %-5d", book1.getType(), book1.wordCount, book1.price))
-        Log.i(TAG, String.format("Тип книги: %-12s, количество слов: %-5d, цена: %-5d", book2.getType(), book2.wordCount, book2.price))
-        Log.i(TAG, String.format("Тип книги: %-12s, количество слов: %-5d, цена: %-5d", magazine.getType(), magazine.wordCount, magazine.price))
+        Log.i(TAG, String.format("Тип книги: %-12s, количество слов: %-5d, цена: %-3d €", book1.getType(), book1.wordCount, book1.price))
+        Log.i(TAG, String.format("Тип книги: %-12s, количество слов: %-5d, цена: %-3d €", book2.getType(), book2.wordCount, book2.price))
+        Log.i(TAG, String.format("Тип книги: %-12s, количество слов: %-5d, цена: %-3d €", magazine.getType(), magazine.wordCount, magazine.price))
         Log.i(TAG, "сравнение по ссылке: " + (book1 === book2).toString())
         Log.i(TAG, "сравнение equals:    " + (book1 == book2).toString())
     }
@@ -90,7 +88,7 @@ class Practice {
         buy(book2)
     }
 
-    private fun buy(@NonNull publication: Publication?) {
+    private fun buy(publication: Publication?) {
         val TAG: String = "PURCHASE"
 
         if (publication != null) {
