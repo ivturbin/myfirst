@@ -3,7 +3,6 @@ package com.example.myapplication
 import android.util.Log
 import java.util.*
 
-
 /**
  * 1. Создать enum Type с константами DEMO и FULL.
  * */
@@ -45,7 +44,7 @@ class Practice2 {
      * */
 
     private fun getUsers(): MutableList<User> {
-        val users = mutableListOf(User(1, "Ivan", 1, Type.FULL))
+        val users = mutableListOf(User(1, "Ivan", 17, Type.FULL))
 
         users.add(User(2, "Adam").apply {
             age = 120
@@ -133,14 +132,13 @@ class Practice2 {
      * В случае получения ошибки вызвать authFailed
      * */
 
-    private fun updateCache(user: User): User {
+    private fun updateCache() {
         Log.i(TAG, "Cache updated")
-        return user
     }
 
-    private inline fun Login.auth(action: (User) -> User) {
-
-        if (action(user).isAdult()) {
+    private inline fun auth(user: User, action: () -> Unit) {
+        action()
+        if (user.isAdult()) {
             getAuthCallBack().authSuccess()
         } else {
             getAuthCallBack().authFailed()
@@ -159,9 +157,15 @@ class Practice2 {
     fun doAction(action: Action) {
         when (action) {
             is Registration -> Log.i(TAG, "Registration")
-            is Login -> action.auth { updateCache(action.user) }
+            is Login -> auth(action.user) { updateCache() }
             is Logout -> Log.i(TAG, "Logout")
         }
+    }
+
+    fun doActionTest() {
+        doAction(Registration())
+        doAction(Login(getFullUsers()[0]))
+        doAction(Login(getFullUsers()[1]))
     }
 }
 
