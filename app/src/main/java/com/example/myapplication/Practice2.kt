@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.util.Log
+import java.lang.IllegalArgumentException
 import java.util.*
 
 /**
@@ -46,15 +47,10 @@ class Practice2 {
     private fun getUsers(): MutableList<User> {
         val users = mutableListOf(User(1, "Ivan", 17, Type.FULL))
 
-        users.add(User(2, "Adam").apply {
-            age = 120
-            type = Type.DEMO
-        })
-        users.add(User(3, "George").apply {
-            age = 121
-            type = Type.FULL
-        })
-        users.add(User(4, "Chups"))
+        users.apply { add(User(2, "Adam", age = 120, type = Type.DEMO)) }
+        users.apply { add(User(3, "George", age = 121, type = Type.FULL)) }
+        users.apply { add(User(2, "Chups")) }
+
         return users
     }
 
@@ -63,14 +59,8 @@ class Practice2 {
      * (поле type имеет значение FULL)
      * */
 
-    private fun getFullUsers(): MutableList<User> {
-        val result = mutableListOf<User>()
-        for (user in getUsers()) {
-            if (user.type == Type.FULL) {
-                result.add(user)
-            }
-        }
-        return result
+    private fun getFullUsers(): List<User> {
+        return getUsers().filter { it.type == Type.FULL }
     }
 
     /**
@@ -80,9 +70,7 @@ class Practice2 {
 
     fun extremeFullUsers() {
         val result = mutableListOf<String>()
-        for (user in getFullUsers()) {
-            result.add(user.name)
-        }
+        getFullUsers().forEach { result.add(it.name) }
         Log.i(TAG, "First user is " + result.first())
         Log.i(TAG, "Second user is " + result.last())
     }
@@ -93,11 +81,11 @@ class Practice2 {
      * и в случае успеха выводит в лог, а в случае неуспеха возвращает ошибку.
      * */
 
-    fun User.isAdult(): Boolean {
-        if (this.age < 18)
-            return false
-        Log.i(TAG, this.name + " is adult.")
-        return true
+    private fun User.checkAge() {
+        if (this.age < 18) {
+            throw TooYoungException("$name is too young")
+        }
+        Log.i(TAG, "$name is adult.")
     }
 
     /**
@@ -112,7 +100,7 @@ class Practice2 {
         fun authFailed()
     }
 
-    fun getAuthCallBack(): AuthCallback {
+    private fun getAuthCallBack(): AuthCallback {
         return object : AuthCallback {
             override fun authSuccess() {
                 Log.i(TAG, "Authorization succeeded")
@@ -137,10 +125,11 @@ class Practice2 {
     }
 
     private inline fun auth(user: User, action: () -> Unit) {
-        action()
-        if (user.isAdult()) {
+        try {
+            user.checkAge()
+            action()
             getAuthCallBack().authSuccess()
-        } else {
+        } catch (e: TooYoungException) {
             getAuthCallBack().authFailed()
         }
     }
@@ -154,7 +143,7 @@ class Practice2 {
      * Для действия Login вызывать метод auth.
      */
 
-    fun doAction(action: Action) {
+    private fun doAction(action: Action) {
         when (action) {
             is Registration -> Log.i(TAG, "Registration")
             is Login -> auth(action.user) { updateCache() }
@@ -163,11 +152,16 @@ class Practice2 {
     }
 
     fun doActionTest() {
-        doAction(Registration())
+        //doAction(Registration())
         doAction(Login(getFullUsers()[0]))
         doAction(Login(getFullUsers()[1]))
+        doAction(Login(getUsers()[1]))
     }
 }
+
+
+class TooYoungException(message: String) : IllegalArgumentException(message)
+
 
 sealed class Action
 class Registration : Action()
