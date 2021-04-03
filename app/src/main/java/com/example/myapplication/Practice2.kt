@@ -47,9 +47,9 @@ class Practice2 {
     private fun getUsers(): MutableList<User> {
         val users = mutableListOf(User(1, "Ivan", 17, Type.FULL))
 
-        users.apply { add(User(2, "Adam", age = 120, type = Type.DEMO)) }
-        users.apply { add(User(3, "George", age = 121, type = Type.FULL)) }
-        users.apply { add(User(2, "Chups")) }
+        users.apply { add(User(2, "Adam", age = 120, type = Type.DEMO));
+            add(User(3, "George", age = 121, type = Type.FULL));
+            add(User(2, "Chups")) }
 
         return users
     }
@@ -69,10 +69,8 @@ class Practice2 {
      * */
 
     fun extremeFullUsers() {
-        val result = mutableListOf<String>()
-        getFullUsers().forEach { result.add(it.name) }
-        Log.i(TAG, "First user is " + result.first())
-        Log.i(TAG, "Second user is " + result.last())
+        Log.i(TAG, "First user is " + getFullUsers().map { user -> user.name }.first())
+        Log.i(TAG, "Second user is " + getFullUsers().map { user -> user.name }.last())
     }
 
     /**
