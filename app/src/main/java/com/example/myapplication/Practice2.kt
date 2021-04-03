@@ -47,8 +47,8 @@ class Practice2 {
     private fun getUsers(): MutableList<User> {
         val users = mutableListOf(User(1, "Ivan", 17, Type.FULL))
 
-        users.apply { add(User(2, "Adam", age = 120, type = Type.DEMO));
-            add(User(3, "George", age = 121, type = Type.FULL));
+        users.apply { add(User(2, "Adam", age = 120, type = Type.DEMO))
+            add(User(3, "George", age = 121, type = Type.FULL))
             add(User(2, "Chups")) }
 
         return users
