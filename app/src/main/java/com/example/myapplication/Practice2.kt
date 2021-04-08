@@ -69,8 +69,9 @@ class Practice2 {
      * */
 
     fun extremeFullUsers() {
-        Log.i(TAG, "First user is " + getFullUsers().map { user -> user.name }.first())
-        Log.i(TAG, "Second user is " + getFullUsers().map { user -> user.name }.last())
+        val names = getFullUsers().map { user -> user.name }
+        Log.i(TAG, "First user is " + names.first())
+        Log.i(TAG, "Second user is " + names.last())
     }
 
     /**
@@ -150,7 +151,7 @@ class Practice2 {
     }
 
     fun doActionTest() {
-        //doAction(Registration())
+        doAction(Registration())
         doAction(Login(getFullUsers()[0]))
         doAction(Login(getFullUsers()[1]))
         doAction(Login(getUsers()[1]))
