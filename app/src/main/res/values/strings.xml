@@ -7,6 +7,10 @@
     <string name="get_push">Получать push-уведомления</string>
     <string name="field_of_activity_label">Сфера деятельности</string>
     <string name="field_of_activity">Хирургия, травматология</string>
+    <string name="friends">Ваши друзья</string>
+    <string name="friend1">Дмитрий Валерьевич</string>
+    <string name="friend2">Евгений Александров</string>
+    <string name="friend3">Виктор Кузнецов</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -15,5 +19,6 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="todo">TODO</string>
 
 </resources>
