@@ -19,6 +19,7 @@ interface Publication {
     fun getType(): String
 }
 
+
 class Book(override val price: Int, override val wordCount: Int) : Publication {
     override fun getType(): String {
         return when (wordCount) {
@@ -40,11 +41,13 @@ class Book(override val price: Int, override val wordCount: Int) : Publication {
     }
 }
 
+
 class Magazine(override val price: Int, override val wordCount: Int) : Publication {
     override fun getType(): String {
         return "Magazine"
     }
 }
+
 
 class Practice {
 
@@ -56,19 +59,17 @@ class Practice {
      * Результаты сравнений вывести в лог.
      * */
 
-    val out = "Тип книги: %-12s, количество слов: %-5d, цена: %-3d €"
-
     fun secondTask() {
         val book1 = Book(100, 1200)
         val book2 = Book(150, 8000)
         val magazine = Magazine(20, 400)
-        val tag: String = "PUBLICATION"
+        val TAG: String = "PUBLICATION"
 
-        Log.i(tag, String.format(out, book1.getType(), book1.wordCount, book1.price))
-        Log.i(tag, String.format(out, book2.getType(), book2.wordCount, book2.price))
-        Log.i(tag, String.format(out, magazine.getType(), magazine.wordCount, magazine.price))
-        Log.i(tag, "сравнение по ссылке: " + (book1 === book2).toString())
-        Log.i(tag, "сравнение equals:    " + (book1 == book2).toString())
+        Log.i(TAG, String.format("Тип книги: %-12s, количество слов: %-5d, цена: %-3d €", book1.getType(), book1.wordCount, book1.price))
+        Log.i(TAG, String.format("Тип книги: %-12s, количество слов: %-5d, цена: %-3d €", book2.getType(), book2.wordCount, book2.price))
+        Log.i(TAG, String.format("Тип книги: %-12s, количество слов: %-5d, цена: %-3d €", magazine.getType(), magazine.wordCount, magazine.price))
+        Log.i(TAG, "сравнение по ссылке: " + (book1 === book2).toString())
+        Log.i(TAG, "сравнение equals:    " + (book1 == book2).toString())
     }
 
     /**
@@ -88,12 +89,12 @@ class Practice {
     }
 
     private fun buy(publication: Publication?) {
-        val tag: String = "PURCHASE"
+        val TAG: String = "PURCHASE"
 
         if (publication != null) {
-            Log.i(tag, "The purchase is complete. The purchase amount was " + publication.price)
+            Log.i(TAG, "The purchase is complete. The purchase amount was " + publication.price)
         } else {
-            Log.i(tag, "There is no purchase")
+            Log.i(TAG, "There is no purchase")
         }
     }
 
@@ -104,8 +105,8 @@ class Practice {
      * */
 
     fun fourthTask() {
-        val tag: String = "LAMBDA"
-        val sum = { a: Int, b: Int -> Log.i(tag, (a + b).toString()) }
+        val TAG: String = "LAMBDA"
+        val sum = { a: Int, b: Int -> Log.i(TAG, (a + b).toString()) }
         sum(5, 8)
     }
 }
