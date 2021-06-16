@@ -1,3 +1,10 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="base_margin">20dp</dimen>
+    <dimen name="min_margin">12dp</dimen>
+    <dimen name="big_text_size">25sp</dimen>
+    <dimen name="base_text_size">16sp</dimen>
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="app_bar_height">200dp</dimen>
+    <dimen name="bottom_navigation_icons_size">24dp</dimen>
 </resources>
