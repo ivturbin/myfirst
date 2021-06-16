@@ -51,7 +51,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/MyTextView"
+                    android:theme="@style/ToolbarTextView"
                     android:text="@string/toolbar"
                     />
 
@@ -87,7 +87,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/base_margin"
-                android:layout_marginLeft="@dimen/base_margin"
                 android:layout_marginTop="@dimen/base_margin"
                 android:text="@string/birth_date_label"
                 android:textColor="@color/black_38"
@@ -100,7 +99,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/base_margin"
-                android:layout_marginLeft="@dimen/base_margin"
                 android:text="@string/birth_date"
                 android:textColor="@color/black_87"
                 android:textSize="@dimen/base_text_size"
@@ -112,7 +110,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/base_margin"
-                android:layout_marginLeft="@dimen/base_margin"
                 android:layout_marginTop="@dimen/base_margin"
                 android:text="@string/field_of_activity_label"
                 android:textColor="@color/black_38"
@@ -147,9 +144,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginEnd="@dimen/base_margin"
-                android:layout_marginRight="@dimen/base_margin"
                 android:checked="true"
                 app:layout_constraintLeft_toRightOf="@id/get_push"
                 app:layout_constraintTop_toBottomOf="@id/field_of_activity" />
@@ -157,9 +152,9 @@
             <View
                 android:id="@+id/divider1"
                 android:layout_width="match_parent"
-                android:layout_height="1sp"
-                android:layout_marginTop="18dp"
-                android:color="@color/black_87"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:background="@color/black_87"
                 app:layout_constraintTop_toBottomOf="@id/get_push" />
 
             <TextView
@@ -167,23 +162,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/base_margin"
-                android:layout_marginLeft="@dimen/base_margin"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="@dimen/fab_margin"
                 android:text="@string/friends"
                 android:textColor="@color/black_38"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider1" />
 
-
             <ImageView
                 android:id="@+id/friend1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/base_margin"
-                android:layout_marginLeft="@dimen/base_margin"
                 android:layout_marginTop="@dimen/fab_margin"
-                android:contentDescription="TODO"
+                android:contentDescription="@string/todo"
                 android:src="@drawable/avatar_1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/friends" />
@@ -193,7 +185,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/base_margin"
-                android:layout_marginLeft="@dimen/base_margin"
                 android:layout_marginTop="@dimen/min_margin"
                 android:text="@string/friend1"
                 android:textColor="@color/black_87"
@@ -206,18 +197,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/base_margin"
-                android:layout_marginLeft="@dimen/base_margin"
                 android:layout_marginTop="@dimen/fab_margin"
                 android:src="@drawable/avatar_2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/friend1" />
+                app:layout_constraintTop_toBottomOf="@id/friend1"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/friend2Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/base_margin"
-                android:layout_marginLeft="@dimen/base_margin"
                 android:layout_marginTop="@dimen/min_margin"
                 android:text="@string/friend2"
                 android:textColor="@color/black_87"
@@ -230,18 +220,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/base_margin"
-                android:layout_marginLeft="@dimen/base_margin"
                 android:layout_marginTop="@dimen/fab_margin"
                 android:src="@drawable/avatar_3"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/friend2" />
+                app:layout_constraintTop_toBottomOf="@id/friend2"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/friend3Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/base_margin"
-                android:layout_marginLeft="@dimen/base_margin"
                 android:layout_marginTop="@dimen/min_margin"
                 android:text="@string/friend3"
                 android:textColor="@color/black_87"
@@ -252,9 +241,9 @@
             <View
                 android:id="@+id/divider2"
                 android:layout_width="match_parent"
-                android:layout_height="1sp"
-                android:layout_marginTop="18dp"
-                android:color="@color/black_87"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:background="@color/black_87"
                 app:layout_constraintTop_toBottomOf="@id/friend3" />
 
             <Button
@@ -279,6 +268,5 @@
         android:layout_gravity="bottom"
         app:itemIconSize="@dimen/bottom_navigation_icons_size"
         app:labelVisibilityMode="labeled"/>
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
