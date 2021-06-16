@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="title_activity_main">Хочу помочь</string>
+    <!-- Главное окно   -->
     <string name="user_name">Константинов Денис</string>
     <string name="birth_date_label">Дата рождения</string>
     <string name="birth_date">01 февраля 1980</string>
@@ -11,6 +12,15 @@
     <string name="friend1">Дмитрий Валерьевич</string>
     <string name="friend2">Евгений Александров</string>
     <string name="friend3">Виктор Кузнецов</string>
+    <string name="button">Выйти из аккаунта</string>
+    <string name="loading">Загрузка...</string>
+    <string name="toolbar">Профиль</string>
+    <!-- Bottom Navigation View-->
+    <string name="news">Новости</string>
+    <string name="search">Поиск</string>
+    <string name="help">Помочь</string>
+    <string name="history">История</string>
+    <string name="profile">Профиль</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
