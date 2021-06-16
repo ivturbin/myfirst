@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
@@ -22,6 +23,11 @@ class MainActivity : AppCompatActivity() {
         practice.secondTask()
         practice.thirdTask()
         practice.fourthTask()
+
+        val practice2 = Practice2()
+        practice2.lazyStartTime()
+        practice2.extremeFullUsers()
+        practice2.doActionTest()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
