@@ -51,7 +51,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/ToolbarTextView"
+                    style="@style/ToolbarTextView"
                     android:text="@string/toolbar"
                     />
 
@@ -74,10 +74,9 @@
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/base_margin"
+                style="@style/TextView"
                 android:layout_marginTop="@dimen/base_margin"
                 android:text="@string/user_name"
-                android:textColor="@color/black_87"
                 android:textSize="@dimen/big_text_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -86,11 +85,9 @@
                 android:id="@+id/birth_date_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/base_margin"
                 android:layout_marginTop="@dimen/base_margin"
                 android:text="@string/birth_date_label"
-                android:textColor="@color/black_38"
-                android:textSize="12sp"
+                style="@style/DeclarationTextView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/name" />
 
@@ -98,10 +95,8 @@
                 android:id="@+id/birth_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/base_margin"
                 android:text="@string/birth_date"
-                android:textColor="@color/black_87"
-                android:textSize="@dimen/base_text_size"
+                style="@style/TextView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/birth_date_label" />
 
@@ -109,11 +104,9 @@
                 android:id="@+id/field_of_activity_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/base_margin"
                 android:layout_marginTop="@dimen/base_margin"
                 android:text="@string/field_of_activity_label"
-                android:textColor="@color/black_38"
-                android:textSize="12sp"
+                style="@style/DeclarationTextView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/birth_date" />
 
@@ -121,10 +114,8 @@
                 android:id="@+id/field_of_activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/base_margin"
                 android:text="@string/field_of_activity"
-                android:textColor="@color/black_87"
-                android:textSize="@dimen/base_text_size"
+                style="@style/TextView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/field_of_activity_label" />
 
@@ -132,11 +123,9 @@
                 android:id="@+id/get_push"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/base_margin"
                 android:layout_marginTop="@dimen/min_margin"
                 android:text="@string/get_push"
-                android:textColor="@color/black_87"
-                android:textSize="@dimen/base_text_size"
+                style="@style/TextView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/field_of_activity" />
 
@@ -161,11 +150,9 @@
                 android:id="@+id/friends"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/base_margin"
                 android:layout_marginTop="@dimen/fab_margin"
                 android:text="@string/friends"
-                android:textColor="@color/black_38"
-                android:textSize="12sp"
+                style="@style/DeclarationTextView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider1" />
 
@@ -184,11 +171,9 @@
                 android:id="@+id/friend1Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/base_margin"
                 android:layout_marginTop="@dimen/min_margin"
                 android:text="@string/friend1"
-                android:textColor="@color/black_87"
-                android:textSize="@dimen/base_text_size"
+                style="@style/TextView"
                 app:layout_constraintStart_toEndOf="@id/friend1"
                 app:layout_constraintTop_toTopOf="@id/friend1" />
 
@@ -207,11 +192,9 @@
                 android:id="@+id/friend2Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/base_margin"
                 android:layout_marginTop="@dimen/min_margin"
                 android:text="@string/friend2"
-                android:textColor="@color/black_87"
-                android:textSize="@dimen/base_text_size"
+                style="@style/TextView"
                 app:layout_constraintStart_toEndOf="@id/friend2"
                 app:layout_constraintTop_toTopOf="@id/friend2" />
 
@@ -230,11 +213,9 @@
                 android:id="@+id/friend3Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/base_margin"
                 android:layout_marginTop="@dimen/min_margin"
                 android:text="@string/friend3"
-                android:textColor="@color/black_87"
-                android:textSize="@dimen/base_text_size"
+                style="@style/TextView"
                 app:layout_constraintStart_toEndOf="@id/friend3"
                 app:layout_constraintTop_toTopOf="@id/friend3" />
 

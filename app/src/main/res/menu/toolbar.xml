@@ -9,7 +9,7 @@
         android:id="@+id/action_edit"
         android:icon="@drawable/ic_edit"
         android:orderInCategory="300"
-        android:title="Item1"
+        android:title="Edit"
         app:showAsAction="ifRoom"
         />
 </menu>

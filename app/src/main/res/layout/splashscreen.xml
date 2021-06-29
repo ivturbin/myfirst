@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -14,11 +14,13 @@
         android:src="@drawable/ic_icon_logo"
         android:layout_gravity="center"
         android:contentDescription="@string/todo" />
-    <LinearLayout
+
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_weight="4">
+
         <ProgressBar
             android:id="@+id/progress_bar"
             style="?android:attr/progressBarStyle"
@@ -34,6 +36,7 @@
             android:text="@string/loading"
             android:textSize="@dimen/small_text_size"
             android:layout_gravity="center"/>
+
     </LinearLayout>
 
     <ImageView
@@ -43,4 +46,5 @@
         android:layout_gravity="center"
         android:layout_weight="3"
         android:contentDescription="@string/todo" />
+
 </LinearLayout>
