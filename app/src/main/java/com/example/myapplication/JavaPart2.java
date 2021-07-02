@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.util.Log;
 
 public class JavaPart2 {
+    static final String DIVIDER = "-----------------------------------------------------------------------";
     public void doIt() {
         LambdaClass lambdaClass = new LambdaClass();
         lambdaClass.test();
@@ -20,13 +21,13 @@ public class JavaPart2 {
      * Используйте эту функцию для печати "I love Java" 10 раз.
      */
     class LambdaClass {
-        private final String TAG = "LAMBDA";
-        private final String LOVE = "I Love Java";
+        private static final String TAG = "LAMBDA";
+        private static final String LOVE = "I Love Java";
 
         Runnable myClosure = () -> Log.i(TAG, LOVE);
 
         public void test() {
-            Log.i(TAG,"-----------------------------------------------------------------------");
+            Log.i(TAG, DIVIDER);
             repeatTask(10,myClosure);
         }
         void repeatTask (int times, Runnable task) {
@@ -35,10 +36,6 @@ public class JavaPart2 {
             }
         }
     }
-    /*
-    interface Runnable {
-        void print();
-    }*/
 
     /**
      * Условия: есть начальная позиция на двумерной плоскости, можно осуществлять
@@ -57,10 +54,10 @@ public class JavaPart2 {
      *использовать созданный ранее метод перемещения на один шаг.
      */
     static class Movings {
-        private final String TAG = "MOVINGS";
+        private static final String TAG = "MOVINGS";
         void test() {
 
-            Log.i(TAG, "-----------------------------------------------------------------------");
+            Log.i(TAG, DIVIDER);
             Point location = new Point(0, 0);
             Directions[] directions = {Directions.UP, Directions.UP, Directions.LEFT,
                     Directions.DOWN, Directions.LEFT, Directions.DOWN,
@@ -79,7 +76,7 @@ public class JavaPart2 {
             RIGHT
         }
         class Point {
-            private final String TAG = "POINT";
+            private static final String TAG = "POINT";
             private int x;
             private int y;
 
@@ -120,9 +117,9 @@ public class JavaPart2 {
      * Circle - круг с одним свойством: диаметр круга
      */
     class Shapes {
-        private final String TAG = "SHAPES";
+        private static final String TAG = "SHAPES";
         void test() {
-            Log.i(TAG, "-----------------------------------------------------------------------");
+            Log.i(TAG, DIVIDER);
             Rectangle rectangle = new Rectangle(5, 2);
             Log.i(TAG,  String.format("Rectangle's area: %.2f, perimeter: %.2f",rectangle.area(), rectangle.perimeter()));
             Square square = new Square(4);
@@ -175,7 +172,7 @@ public class JavaPart2 {
         }
     }
     class Circle implements Shape {
-        private final double PERIMETER_FORMULA = 2 * Math.PI;
+        private static final double PERIMETER_FORMULA = 2 * Math.PI;
         private final double radius;
 
         Circle(double radius) {

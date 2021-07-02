@@ -1,6 +1,26 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Хочу помочь</string>
+    <!-- Главное окно   -->
+    <string name="user_name">Константинов Денис</string>
+    <string name="birth_date_label">Дата рождения</string>
+    <string name="birth_date">01 февраля 1980</string>
+    <string name="get_push">Получать push-уведомления</string>
+    <string name="field_of_activity_label">Сфера деятельности</string>
+    <string name="field_of_activity">Хирургия, травматология</string>
+    <string name="friends">Ваши друзья</string>
+    <string name="friend1">Дмитрий Валерьевич</string>
+    <string name="friend2">Евгений Александров</string>
+    <string name="friend3">Виктор Кузнецов</string>
+    <string name="button">Выйти из аккаунта</string>
+    <string name="loading">Загрузка...</string>
+    <string name="toolbar">Профиль</string>
+    <!-- Bottom Navigation View-->
+    <string name="news">Новости</string>
+    <string name="search">Поиск</string>
+    <string name="help">Помочь</string>
+    <string name="history">История</string>
+    <string name="profile">Профиль</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -9,4 +29,5 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="todo">TODO</string>
 </resources>
